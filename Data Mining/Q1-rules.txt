@@ -1,0 +1,7 @@
+Age>= 0
+Age<=150
+Age>yearsmarried
+status %in% c('married','single','widowed')
+Age<18 & agegroup=='child'
+Age>18 & Age<65&agegroup=='adult'
+Age>65 & agegroup=='elderly'
