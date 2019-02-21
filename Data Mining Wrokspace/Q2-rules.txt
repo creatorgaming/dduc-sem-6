@@ -1,1 +1,8 @@
- 
+Species %in% c('sentosa','versicolor','virginia')
+Sepal.Length	> 0
+Sepal.Width	  > 0
+Petal.Length	> 0
+Petal.Width   > 0
+Petal.Length == 2*Petal.Width
+Sepal.Length <= 30
+Sepal.Length <= Petal.Length
