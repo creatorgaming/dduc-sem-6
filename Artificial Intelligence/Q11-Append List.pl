@@ -1,7 +1,16 @@
-go :- conc([1,2,3,4,5],[7,8,9],R),
-      write('Appended List is : '), 
-      write(R),nl.
+go :-
+    write('Enter List 1 : '),
+    read(L1),
+    write('Enter List 2 : '),
+    read(L2),
+    write('Appended List is : '),
+    conc(L1, L2, R),
+    write(R),
+    nl.
 
-conc(L1,[],R) :- !.
-conc([],[H2|T2],R) :- conc(_,T2,[H2]).
-conc([H1|T1],L2,R) :- conc(T1,L2,[H1]).
+conc([], [], []) :-
+    !.
+conc([], [H2|T2], [H2|X]) :-
+    conc([], T2, X).
+conc([H1|T1], L2, [H1|X]) :-
+    conc(T1, L2, X).
