@@ -6,7 +6,7 @@ go :-
     write(R),
     nl.
 
-maxList([], R) :-
-    !.
+maxList([H|[]], H) :- !.
 maxList([H1|T1], R) :-
-    maxList(T1, R1).
+    maxList(T1, R1),
+    (H1 > R1,(R is H1);(R is R1)).
