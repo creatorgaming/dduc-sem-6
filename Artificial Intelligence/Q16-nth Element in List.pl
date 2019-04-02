@@ -1,7 +1,10 @@
-go :- write('Enter position of element you want to search :- '),
+go :- 
+      write('Enter list :- '),
+      read(L),
+      write('Enter position of element you want to search :- '),
       read(N),
       write('nth Element is :- '),
-      n_element(N,[1,2,3,4,5],Result),
+      n_element(N,L,Result),
       write(Result).
 
 n_element(1,[],X) :- fail.

@@ -6,8 +6,12 @@ go :-
     write(R),
     nl.
 
-rem_dup([], []) :- !.
-rem_dup([H|T],R) :- rem_dup(T,R1),
-                    not(member([H],R1)),
-                    append(R1,[H],R).
+rem_dup([], []) :-
+    !.
+rem_dup([H|T], R) :-
+    rem_dup(T, R1),
+    (   not(member(H, R1)),
+        append([H], R1, R)
+    ;   append(R1, [], R)
+    ).
                     
