@@ -3,6 +3,9 @@ reversal([X],[X]) :- !.
 reversal([H|T],L) :- reversal(T, R),
                      append(R, [H], L).
 
-go:- pallindrome([1,2,2,2,2,1]).
+go:- 
+  write('Enter List : '),
+  read(L),
+  pallindrome(L).
 
 pallindrome(L1) :- reversal(L1,L1).
