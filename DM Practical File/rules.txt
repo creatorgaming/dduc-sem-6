@@ -1,0 +1,5 @@
+age >0
+age<150
+yearsmarried <age
+status %in% c('single','married','widowed')
+	

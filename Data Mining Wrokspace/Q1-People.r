@@ -3,7 +3,8 @@ library(dplyr)
 library(editrules)
 
 # read data from people.csv
-people <- read.csv("People.csv", header=TRUE)
+people <- read.csv("datasets/People.csv", header=TRUE)
+print(people)
 
 # implementing filter rules using rules.txt
 # rules <- editfile('Q1-rules.txt', 'all')
@@ -17,5 +18,6 @@ summary(filtered)
 
 # visualize filtered data
 # filtered
+print("Filtered ... ")
 print(filtered)
 plot(filtered)
