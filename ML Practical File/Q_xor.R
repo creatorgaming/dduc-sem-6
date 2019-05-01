@@ -1,0 +1,8 @@
+x1=c(0,0,1,1)
+x2=c(0,1,0,1)
+R= c(0,1,1,0)
+dataf=data.frame(x1,x2,R)
+library(neuralnet)
+nn<-neuralnet(R~.,data=dataf,hidden=2,linear.output=FALSE)
+pred<-neuralnet::compute(nn,dataf)
+plot(nn)
