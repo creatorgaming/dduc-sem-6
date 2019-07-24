@@ -3,10 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def take_input():
-    x = int(input("Enter x coordinate of center : "))
-    y = int(input("Enter y coordinate of center: "))
     r = int(input("Enter radius of circle : "))
-    algo(x,y,r)
+    algo(0,0,r)
 
 def algo(x,y,r):
     xk_points = [0]

@@ -33,4 +33,4 @@ summary(filtered_dirty_iris)
 
 #Part - 5
 outliers <- boxplot.stats(Sepal.Length)
-boxplot(outliers)
+boxplot(outliers$stats)

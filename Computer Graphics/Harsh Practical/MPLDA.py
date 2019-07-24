@@ -24,15 +24,12 @@ print("points are : ")
 
 while(startx < endx):
 	startx = startx + 1
-	actualy = line(startx)
 
-	midpoint = 
-	if(coeffn[0] < 0):
-		if(abs(actualy - starty)  > abs(actualy - starty + 1)):
-			starty = starty - 1
-	else:
-		if(abs(actualy - starty)  > abs(actualy - starty - 1)):
-			starty = starty + 1
+	midpoint = (2*starty + 1)/2
+	d = midpoint - line(startx)
+	if(d < 0):
+		starty = starty + 1
+		
 	print(startx,starty)
 	points[0].append(startx)
 	points[1].append(starty)
